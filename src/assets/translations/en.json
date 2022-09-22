@@ -1,0 +1,23 @@
+{
+  "language": "en",
+  "dark_mode": "Dark Mode",
+  "home_welcome": "Hello",
+  "home_i": "I'm",
+  "home_what_i_do": "Fullstack Web Developer",
+  "home_job": "Fullstack web developer, WebRTC Developer",
+  "home_location": "Based in Nara Japan",
+  "home_contact_btn": "Contact me",
+  "menu_about": "About",
+  "menu_experience": "Experience",
+  "menu_contact": "Contact",
+  "about_desc": "Hello, my name is Ethan Denvir and I love creating things and especially interested in WebRTC/Streaming solutions",
+  "experience_0_job": "Media Developer/Backend Developer/App Developer",
+  "experience_0_overview": "Implementing live streaming solutions. Developer Lead position",
+  "experience_0_duration": "June 2016 - June 2021",
+  "experience_1_job": "Fullstack Developer/App Developer/System Admin",
+  "experience_1_overview": "Everything",
+  "experience_1_duration": "August 2021 - Present",
+  "contact_full_name": "Full Name",
+  "contact_email": "Email Address",
+  "contact_btn": "Send Message"
+}

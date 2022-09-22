@@ -1,0 +1,23 @@
+{
+  "language": "jp",
+  "dark_mode": "ダークモード",
+  "home_welcome": "こんにちは",
+  "home_i": "私",
+  "home_what_i_do": "フルスタック開発者",
+  "home_job": "フルスタック開発者・WebRTC開発",
+  "home_location": "奈良 日本",
+  "home_contact_btn": "問い合わせ",
+  "home_about": "私について",
+  "menu_experience": "スキル",
+  "menu_contact": "問い合わせ",
+  "acout_desc": "私はイーサンと申します",
+  "experience_0_job": "メディア開発・バックエンド開発・アプリ開発",
+  "experience_0_overview": "主任役",
+  "experience_0_duration": "June 2016 - Aug 2021",
+  "experience_1_job": "フルスタック開発・アプリ開発・メディア開発・システム管理",
+  "experience_1_overview": "全部",
+  "experience_1_duration": "Sep 2021 - Present",
+  "contact_full_name": "名前",
+  "contact_email": "メールアドレス",
+  "contact_btn": "メール送信"
+}
