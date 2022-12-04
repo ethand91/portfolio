@@ -4,9 +4,9 @@ import {
   Button,
   Container,
   TextField,
-  Typography
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
+  Typography,
+  makeStyles
+} from '@material-ui/core';
 import { useFormik } from 'formik';
 import emailjs from 'emailjs-com';
 import * as Yup from 'yup';

@@ -1,9 +1,6 @@
 import React from 'react';
 import { Container } from '@mui/material';
-import { makeStyles, ThemeProvider } from '@mui/styles';
-import { createTheme } from '@mui/material/styles';
-
-const theme = createTheme();
+import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -19,11 +16,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const HomeContainer = props => {
+  const styles = useStyles();
+
   return (
-    <ThemeProvider theme={ theme }>>
-      <Container className={ theme.container } { ...props.rest }>
-        { props.children }
-      </Container>
-    </ThemeProvider>
+    <Container className={ styles.container } { ...props.rest }>
+      { props.children }
+    </Container>
   );
 };

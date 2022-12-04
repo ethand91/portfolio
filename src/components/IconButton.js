@@ -3,8 +3,8 @@ import {
   Box,
   Link,
   Icon,
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
+  makeStyles
+} from '@material-ui/core';
 import { motion } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({

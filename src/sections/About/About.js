@@ -4,9 +4,9 @@ import {
   Grid,
   Typography,
   Box,
-  useMediaQuery
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
+  useMediaQuery,
+  makeStyles
+} from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 
 import { SectionContainer } from './../../containers/SectionContainer';

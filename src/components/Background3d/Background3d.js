@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@material-ui/core';
 
 import loaderContext from './../../contexts/loaderContext';
 

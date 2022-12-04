@@ -5,9 +5,9 @@ import {
   Button,
   Divider,
   ListItem,
-  Link as MuiLink
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
+  Link as MuiLink,
+  makeStyles
+} from '@material-ui/core';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 

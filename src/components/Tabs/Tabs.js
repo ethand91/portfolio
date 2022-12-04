@@ -6,13 +6,13 @@ import {
   Box,
   Link,
   useTheme,
-  useMediaQuery
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
+  useMediaQuery,
+  makeStyles
+} from '@material-ui/core';
 import {
   Language,
   Instagram
-} from '@mui/icons-material';
+} from '@material-ui/icons';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from './../../components/IconButton';

@@ -3,9 +3,9 @@ import {
   Typography,
   Box,
   useTheme,
-  Paper
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
+  Paper,
+  makeStyles
+} from '@material-ui/core';
 
 import { ProgressBar } from './ProgressBar';
 import { skillsList } from './../../data';

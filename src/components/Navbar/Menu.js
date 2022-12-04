@@ -3,9 +3,10 @@ import {
   Tab,
   Tabs,
   Button,
-  Link as MuiLink
-} from '@mui/material';
-import { makeStyles, withStyles } from '@mui/styles';
+  Link as MuiLink,
+  makeStyles,
+  withStyles
+} from '@material-ui/core';
 import { motion, useAnimation } from 'framer-motion';
 import { Link, Events } from 'react-scroll';
 import { useTranslation } from 'react-i18next';

@@ -9,7 +9,6 @@ import { Home } from './../../sections/Home';
 import { About } from './../../sections/About';
 import { Experience } from './../../sections/Experience';
 import { Contact } from './../../sections/Contact';
-import { Background3d } from './../../components/Background3d/Background3d';
 
 export const MainHome = () => {
   const theme = useTheme();
@@ -29,7 +28,6 @@ export const MainHome = () => {
       <About />
       <Experience />
       <Contact />
-      { !isMobile && <Background3d /> }
     </motion.main>
   );
 };

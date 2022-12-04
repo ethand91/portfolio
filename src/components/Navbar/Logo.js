@@ -1,8 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@material-ui/core';
 import { Link } from 'react-scroll';
 
-import Ethan from './../../assets/images/avatar.jpg';
+import Ethan from './../../assets/images/Ethan';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,7 +21,7 @@ export const Logo = props => {
       offset={ -70 }
       to="home"
       onSetActive={ () => props.setHomeIsActive(true) }
-      onSetInavtive={ () => props.setHomeIsActive(false) }
+      onSetInactive={ () => props.setHomeIsActive(false) }
       className={ classes.root }
     >
       <Ethan { ...props.rest }/>

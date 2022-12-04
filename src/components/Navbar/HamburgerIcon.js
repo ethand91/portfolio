@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@material-ui/core';
 import { motion, useAnimation } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({

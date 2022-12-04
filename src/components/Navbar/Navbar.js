@@ -5,10 +5,8 @@ import {
   AppBar,
   Toolbar,
   Hidden,
-  ThemeProvider
-} from '@mui/material';
-import { createTheme } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
+  makeStyles
+} from '@material-ui/core';
 import { motion, useAnimation } from 'framer-motion';
 
 import { Logo } from './Logo';
@@ -16,8 +14,6 @@ import { Menu } from './Menu';
 import { MobileMenu } from './MobileMenu';
 import { HamburgerIcon } from './HamburgerIcon';
 import loaderContext from './../../contexts/loaderContext';
-
-const theme = createTheme();
 
 const useStyles = makeStyles((theme) => ({
   logo: {
@@ -34,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const Navbar = () => {
+  const styles = useStyles();
   const [ homeIsActive, setHomeIsActive ] = useState(true);
   const isMobile = useMediaQuery("(max-width: 700px)");
   const { isLoading } = useContext(loaderContext);
@@ -45,8 +42,8 @@ export const Navbar = () => {
   window.addEventListener("scroll", handleNav);
 
   const appbarVariants = {
-    initial: { height: isMobile ? 70 : 100, boxShadow: theme.shadows[0] },
-    scrolled: { height: theme.navbarHeight, boxShadow: theme.shadows[10] }
+    initial: { height: isMobile ? 70 : 100, boxShadow: theme.shadows[1] },
+    scrolled: { height: styles.navbarHeight, boxShadow: theme.shadows[10] }
   };
 
   useEffect(() => {
@@ -66,40 +63,37 @@ export const Navbar = () => {
   }, [ isLoading, controls ]);
 
   return (
-    <ThemeProvider theme={ theme }>
-      <motion.div animate={ controls }>
-        <AppBar position="fixed" elevation={ 0 } className={ theme.navbar } component="nav">
-          <Toolbar
-            className={ theme.toolbar }
-            component={ motion.div }
-            variants={ appbarVariants }
-            animate={ scroll ? "scrolled" : "initial" }
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 20
-            }}
-          >
-            <Logo className={ theme.logo } setHomeIsActive={ setHomeIsActive } />
+    <motion.div animate={ controls }>
+      <AppBar position="fixed" elevation={ 0 } className={ styles.navbar } component="nav">
+        <Toolbar
+          className={ styles.toolbar }
+          component={ motion.div }
+          variants={ appbarVariants }
+          animate={ scroll ? "scrolled" : "initial" }
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20
+          }}
+        >
+          <Logo className={ styles.logo } setHomeIsActive={ setHomeIsActive } />
 
-            <Hidden smDown>
-              <Menu homeIsActive={ homeIsActive } />
-            </Hidden>
+          <Hidden smDown>
+            <Menu homeIsActive={ homeIsActive } />
+          </Hidden>
 
-            <Hidden mdUp>
-              <HamburgerIcon isOpen={ mobileNavIsOpen } onClick={ () => setMobileNavIsOpen(!mobileNavIsOpen) }/>
-            </Hidden>
-          </Toolbar>
-        </AppBar>
-        <Hidden mdUp>
-          <MobileMenu
-            open={ mobileNavIsOpen }
-            onClose={ () => setMobileNavIsOpen(false) }
-            onOpen={ () => setMobileNavIsOpen(true) }
-          />
-        </Hidden>
-      </motion.div>
-
-    </ThemeProvider>
+          <Hidden mdUp>
+            <HamburgerIcon isOpen={ mobileNavIsOpen } onClick={ () => setMobileNavIsOpen(!mobileNavIsOpen) }/>
+          </Hidden>
+        </Toolbar>
+      </AppBar>
+      <Hidden mdUp>
+        <MobileMenu
+          open={ mobileNavIsOpen }
+          onClose={ () => setMobileNavIsOpen(false) }
+          onOpen={ () => setMobileNavIsOpen(true) }
+        />
+      </Hidden>
+    </motion.div>
   );
 };

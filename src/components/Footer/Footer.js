@@ -5,9 +5,9 @@ import {
   Divider,
   useTheme,
   Box,
-  useMediaQuery
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
+  useMediaQuery,
+  makeStyles
+} from '@material-ui/core';
 
 import { Social } from './../Social';
 

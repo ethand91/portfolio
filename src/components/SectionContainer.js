@@ -74,7 +74,7 @@ export const SectionContainer = props => {
           >
             <Divider width="20%" />
             <Typography variant="h4" color="initial" className={ classes.title }>
-              { title }
+              { props.title }
             </Typography>
           </motion.div>
         )
@@ -95,7 +95,7 @@ export const SectionContainer = props => {
           hidden: { opacity: 0, y: -50 }
         }}
       >
-        { children }
+        { props.children }
       </motion.div>
     </Container>
   );

@@ -2,8 +2,8 @@ import React, { useContext, useEffect } from 'react';
 import {
   Typography,
   Button,
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
+  makeStyles
+} from '@material-ui/core';
 import { motion, useAnimation } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import {
   Container,
-  Typography
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
+  Typography,
+  makeStyles
+} from '@material-ui/core';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -56,6 +56,49 @@ export const SectionContainer = props => {
 
   return (
     <Container component='section' className={ classes.container } { ...props.rest }>
+      {
+        props.title && (
+          <motion.div
+            ref={ titleRef }
+            animate={ titleControls }
+            initial="hidden"
+            transition={{
+              delay: 0.3,
+              type: "spring",
+              stiffness: 100,
+              damping: 20
+            }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: props.reverse ? 0 : 0 }
+            }}
+            className={ classes.titleContainer }
+          >
+            <Divider width="20%" />
+            <Typography variant="h4" color="initial" className={ classes.title }>
+              { props.title }
+            </Typography>
+          </motion.div>
+        )
+      }
+      <motion.div
+        ref={ contentRef }
+        animate={ contentControls }
+        initial="hidden"
+        transition={{
+          delay: 0.5,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          when: "beforeChildren"
+        }}
+        variants={{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: -50 }
+        }}
+      >
+
+      </motion.div>
     </Container>
   );
 };

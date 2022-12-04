@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@mui/styles';
+import { ThemeProvider, makeStyles } from '@material-ui/core';
 import { motion, useAnimation } from 'framer-motion';
 import {
   LinkedIn,
   Instagram,
   GitHub,
   Email
-} from '@mui/icons-material';
+} from '@material-ui/icons';
 
 import { IconButton } from './../IconButton';
 import { DarkModeSwitcher } from './../DarkModeSwitcher';
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const Social = props => {
-  const classes = useStyles();
+  const styles = useStyles();
   const { isLoading } = useContext(loaderContext);
   const controls = useAnimation();
 
@@ -50,7 +50,7 @@ export const Social = props => {
 
   if (props.isMobile) {
     return (
-      <div className={ classes.mobileWrapper }>
+      <div className={ styles.mobileWrapper }>
         <IconButton icon={ GitHub } m={ 1 } href="https://github.com/ethand91" />
         <IconButton icon={ Instagram } m={ 1 } href="https://instagram.com/edenvir99" />
         <IconButton icon={ LinkedIn } m={ 1 } href="https://www.linkedin.com/in/ethan-denvir-ba1a75240/" />
@@ -59,7 +59,7 @@ export const Social = props => {
     );
   } else {
     return (
-      <motion.div className={ classes.wrapper }>
+      <motion.div className={ styles.wrapper }>
         <motion.div animate={ controls } custom={ 0 }>
           <IconButton icon={ GitHub } m={ 1 } href="https://github.com/ethand91" />
         </motion.div>

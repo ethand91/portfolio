@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { LoaderContainer } from './../../containers/LoaderContainer';
-import Ethan from './../../assets/images/avatar.jpg';
+import Avatar from './../../assets/images/Avatar.jpg';
 
 export const Loader = () => {
   <LoaderContainer>
-    <Ethan width={ 250 } />
+    <Avatar width={ 250 } />
   </LoaderContainer>
 };

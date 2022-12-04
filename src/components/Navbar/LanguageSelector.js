@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import {
   Menu,
   MenuItem,
-  Button
-} from '@mui/material';
-import { makeStyles } from '@mui/styles';
-import { KeyboardArrowDownSharp } from '@mui/icons-material';
+  Button,
+  makeStyles
+} from '@material-ui/core';
+import { KeyboardArrowDownSharp } from '@material-ui/icons';
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import 'flag-icon-css/css/flag-icons.min.css';
